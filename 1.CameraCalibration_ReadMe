@@ -1,0 +1,23 @@
+Before Start: 
+Make sure that you have the following : 
+1. opencv 2.4.9 library in ur system
+2. A piece of chessboard marker with (10x9) 
+   "attached in this folder: pattern.png" 
+
+
+Description: This module mainly focus on finding the stereo camera intrinsic and extrinsic parameters from several views of a calibration pattern. Intrinsic parameters deal with the camera's internal characteristics, such as, its focal length, skew, distortion, and image center. Extrinsic parameters describe its position and orientation in the world. Knowing intrinsic parameters is an essential first step for 3D computer vision, as it allows you to estimate the scene's structure in Euclidean space and removes lens distortion, which degraces accuracy.
+
+1. "0Stereo_VideoCapture.cpp" - Capture and save left&&right image of the chessboard at different orientations and distances 
+2. "1imagelist_creator.cpp" - To Create/save the imagelist into stereo_calib.xml file for camera calibration in step 3.
+3. "2stereo_calib.cpp" - Obtaining the intrinsic.yml and extrinsics.yml
+
+
+
+Examle ::
+1.  $ make 
+    $ ./Stereo_Capture 0 1                     // on both camera with index 0 1 
+    $ ./imagelist_creator stereo_calib.xml 9   // create imagelist file with 9 pair of image and saved in stereo_calib.xml
+    $./stereo_calib stereo_calib.xml           // by input stereo_calib.xml, obtain the intrincis.yml and extrinsic.yml 
+
+
+

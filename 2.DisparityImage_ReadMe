@@ -1,0 +1,13 @@
+0.The code to obtain disparityImage from stereo camarea written in "DisparityMap.cpp"
+1.To obtain disparity image from sample image  : 
+    $ ./disparityImage aloeL.jpg aloeR.jpg
+2. Real time (Input image from video streaming): 
+    $./disparityImage 
+
+   Note : It noisy when run in real time as result : in folder "Result/realtime.png". 
+          Idea to solve : 1. Implement pre-processing 
+                          2. Detect indiviual object to obtain 3D point cloud.
+
+
+3. OpenCVBM is program used to tune the parameter for opencv disparity function.
+ 
