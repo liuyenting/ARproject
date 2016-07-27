@@ -1,2 +1,0 @@
-# 3DRecontruction
-# ARproject
